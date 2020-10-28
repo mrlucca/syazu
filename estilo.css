@@ -1,0 +1,128 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-image: url("../_imagens/marte.png");
+	background-size: 1920px 800px;
+	color: #000000;
+	font-family: poppins;
+	background-repeat: no-repeat;
+}
+input{
+	display: block;
+	height: 55px;
+	width: 400px;
+	margin: 10px;
+	border-radius: 30px;
+	border:1.2px solid #a5d0d1;
+	font-size: 16pt;
+	padding: 10px 20px;
+	background-color: rgba(171 ,130 ,255,0.05);
+	color: white;
+	outline: none;
+	box-sizing: border-box;
+}
+
+div#corpo-form{
+	width: 420px;
+	margin: 130px auto 0px auto;
+}
+div#corpo-form h1{
+	text-align: center;
+	padding: 20px;
+	color: #00CED1;
+	font-size: 35pt;
+}
+div#corpo-form-cad{
+	width: 420px;
+	margin: 130px auto 0px auto;
+}
+div#corpo-form-cad h1{
+	text-align: center;
+	padding: 20px;
+	color: #00CED1;
+	font-size: 35pt;
+}
+
+.textShadow {
+  text-shadow: 2px 2px 6px rgba(12,8,9,0.7);
+}
+
+a{
+	color: #119395;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+a:hover{
+	text-decoration: underline;
+}
+input[type=submit]{
+	background-color: #00CED1;
+	border: none;
+	cursor: pointer;
+}
+input[class=row]{
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: none;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+.row:hover {
+	color: #00CED1 !important;
+	background-color: #fff;
+	text-shadow: ntwo;
+}
+.row:hover:before {
+	top: 0%;
+	bottom: auto;
+	height: 100%;
+}
+.row:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #00CED1 !important;
+	background: #00CED1;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+div#msg-sucesso{
+	width: 400px;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: rgba(50,205,50,.3);
+	border: 1px solid rgb(34,139,34);
+}
+
+div.msg-erro{
+	width: 400px;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: rgba(250,128,114,.3);
+	border: 1px solid rgb(165,42,42);
+}
+
+::-webkit-input-placeholder {  
+  color: #a5d0d1;
+}
+
+::-moz-placeholder {   
+  color: #a5d0d1;
+}
+
+::-moz-placeholder {   
+  color: #a5d0d1;
+}
+
+::-ms-input-placeholder {   
+  color: #a5d0d1;
+}
