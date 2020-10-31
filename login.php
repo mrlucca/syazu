@@ -8,7 +8,7 @@ $u = new Usuario();
 <head>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Poppins:300,400,500&display=swap" rel="stylesheet">
-	<title>Área de Login</title>
+	<title> Área de Login </title>
 	<link rel="stylesheet" href="_css/estilo.css">
 	<link rel="icon" type="image/png" href="_imagens/novo1.png">
 	<meta name="viewport" content="width=device-width">
