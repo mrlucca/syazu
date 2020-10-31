@@ -20,7 +20,7 @@ Class Usuario
 	{
 		global $pdo;
 		//verificar se já existe o nickname cadastrado
-		$sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE nickname = :e");
+		$sql = $pdo->prepare("SELECT id FROM usuarios WHERE nickname = :e");
 		$sql->bindValue(":e",$nickname);
 		$sql->execute();
 		if($sql->rowCount() > 0)
@@ -44,7 +44,8 @@ Class Usuario
 	{
 		global $pdo;
 		//verificar se o nickname e senha estao cadastrados, se sim
-		$sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE nickname = :e AND senha = :s");
+		$sql = $pdo->prepare("SELECT id, nome FROM usuarios WHERE nickname = :e AND senha = :s");
+		var_dump($sql);
 		$sql->bindValue(":e",$nickname);
 		$sql->bindValue(":s",md5($senha));
 		$sql->execute();
@@ -53,7 +54,8 @@ Class Usuario
 			//entrar no sistema (sessao)
 			$dado = $sql->fetch();
 			session_start();
-			$_SESSION['id_usuario'] = $dado['id_usuario'];
+			$_SESSION['id_usuario'] = $dado['id'];
+			$_SESSION['nome'] = $dado['nome'];
 			return true; //cadastrado com sucesso
 		}
 		else

@@ -1,6 +1,7 @@
 <?php 
-require_once '_classes/usuarios.php';
+require_once __DIR__ . '/../src/models/usuarios.php';
 $u = new Usuario();
+$ini = parse_ini_file(dirname(__DIR__, 1) . "/.ini");
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +10,8 @@ $u = new Usuario();
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Poppins:300,400,500&display=swap" rel="stylesheet">
 	<title> Área de Login </title>
-	<link rel="stylesheet" href="_css/estilo.css">
-	<link rel="icon" type="image/png" href="_imagens/novo1.png">
+	<link rel="stylesheet" href="./assets/style/estilo.css"> 
+	<link rel="icon" type="image/png" href="./assets/img/novo1.png">
 	<meta name="viewport" content="width=device-width">
 </head>
 <body>
@@ -31,12 +32,12 @@ if(isset($_POST['nickname']))
 	
 	if(!empty($nickname) && !empty($senha))
 	{
-		$u->conectar("tela_login","localhost","root","");
+		$u->conectar($ini["table"],	$ini["host"], $ini["user"], $ini["password"]);
 		if($u->msgErro == "")
 		{
 			if($u->logar($nickname,$senha))
 			{
-				header("location: AreaPrivada.php");
+				header("location: home.php");
 			}
 			else
 			{

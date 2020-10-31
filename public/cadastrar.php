@@ -1,6 +1,7 @@
 <?php
-	require_once '_classes/usuarios.php';
+	require_once __DIR__ . '/../src/models/usuarios.php';
 	$u = new Usuario();
+	$ini = parse_ini_file(dirname(__DIR__, 1) . "/.ini");
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +10,8 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Poppins:300,400,500&display=swap" rel="stylesheet">
 	<title>Área de Cadastro</title>
-	<link rel="icon" type="image/png" href="_imagens/novo1.png">
-	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="icon" type="image/png" href="./assets/img/novo1.png">
+	<link rel="stylesheet" href="./assets/style/estilo.css">
 </head>
 <body>
 <div id="corpo-form-cad">
@@ -35,7 +36,8 @@ if(isset($_POST['nome']))
 	//verificar se esta preenchido
 	if(!empty($nome) && !empty($nickname) && !empty($senha) && !empty($confirmarSenha))
 	{ 
-		$u->conectar("tela_login","localhost","root","");
+
+		$u->conectar($ini["table"],	$ini["host"], $ini["user"], $ini["password"]);
 		if($u->msgErro == "")//se esta tudo ok
 		{
 			if($senha == $confirmarSenha)

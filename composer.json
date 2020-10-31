@@ -1,0 +1,15 @@
+{
+    "name": "game/syazu",
+    "authors": [
+        {
+            "name": "vinilucca",
+            "email": "vini.lucca42@gmail.com"
+        },
+        {
+            "name": "maria",
+            "email": "maria@example.com"
+        }
+    ],
+    "description": "Site requisitado pelo professor para complemento da apresentação do game",
+    "require": {}
+}
