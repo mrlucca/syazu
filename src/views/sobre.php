@@ -1,4 +1,4 @@
-<div>
+<div class="text-center">
     <h1 class="tituloDaPostagem">SALVE MARTE</h1>
         <section class="grid">
             <p class="item">O jogo Salve Marte (história do jogo).</p>

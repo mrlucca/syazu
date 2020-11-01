@@ -7,7 +7,8 @@ class Page
     private static $page_list = [
         'home' => __DIR__ . '/../views/home.php',
         'sobre' => __DIR__ . '/../views/sobre.php',
-        'jogo' => __DIR__ . '/../views/jogo.php'
+        'jogo' => __DIR__ . '/../views/jogo.php',
+        'rank' => __DIR__ . '/../views/rank.php'
 
     ];
     public static function setPage($page)

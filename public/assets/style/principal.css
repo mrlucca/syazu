@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    padding:0;
+    margin:0;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "conteudo conteudo conteudo"
+    "footer footer footer";
+    grid-template-columns: auto;
+    grid-template-rows: 10% 80% auto; 
+}
+
+header {
+    grid-area: header;
+    background-color: #212529;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+
+.conteudo {
+    grid-area: conteudo;
+    overflow-y: scroll;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #212529;
+    margin-top: 10px;
+}
+
+
+
+.copy {
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.hello {
+    background-color: #17a2b8;
+    padding: 2px;
+    border-radius: 5px;
+}
+.err-page {
+  
+    text-align: center;
+}
+
