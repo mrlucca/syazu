@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato|Poppins:300,400,500&display=swap" rel="stylesheet">
 	<title>Área de Cadastro</title>
 	<link rel="icon" type="image/png" href="./assets/img/novo1.png">
-	<link rel="stylesheet" href="./assets/style/estilo.css">
+	<link rel="stylesheet" href="./assets/css/estilo.css">
 </head>
 <body>
 <div id="corpo-form-cad">

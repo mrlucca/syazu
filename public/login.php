@@ -10,7 +10,7 @@ $ini = parse_ini_file(dirname(__DIR__, 1) . "/.ini");
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Poppins:300,400,500&display=swap" rel="stylesheet">
 	<title> Área de Login </title>
-	<link rel="stylesheet" href="./assets/style/estilo.css"> 
+	<link rel="stylesheet" href="./assets/css/estilo.css"> 
 	<link rel="icon" type="image/png" href="./assets/img/novo1.png">
 	<meta name="viewport" content="width=device-width">
 </head>
@@ -37,7 +37,7 @@ if(isset($_POST['nickname']))
 		{
 			if($u->logar($nickname,$senha))
 			{
-				header("location: home.php");
+				header("location: index.php");
 			}
 			else
 			{

@@ -1,0 +1,34 @@
+html, body {
+    height: 100%;   
+}
+
+#header {
+    width: 100%;
+}
+#main {
+    flex: 1;
+}
+
+#main > .row, #main-menu {
+    height: 100%;
+}
+#main > .row { 
+    margin-right: 0;
+}
+
+#main-menu .nav-link {
+    color: #ffff;
+}
+#main-menu .nav-link.active { 
+    background-color: rgb(86, 226, 4);
+}
+
+.nome-game {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(86, 226, 4);
+}
+
+#content {
+    padding-top: 20px;
+}
