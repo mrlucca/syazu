@@ -8,55 +8,50 @@
 </head>
 <body class="d-flex flex-column">
 <div id="header">
-        <nav class="navbar navbar-dark bg-dark">
-            <span>
-                <a href="#" class="navbar-brand nome-game">Syazu</a>
-                <span class="navbar-text">
-                    Bem vindo <?= mb_convert_case($_SESSION["nome"], MB_CASE_TITLE, "UTF-8")?>!
-                </span>
-            </span>
-            <a href="/sair" class="btn btn-danger"><i class="fas fa-sign-out-alt">Sair</i></a>
-        </nav>
+
+<div class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Bem vindo <?= mb_convert_case($_SESSION["nome"], MB_CASE_TITLE, "UTF-8") ?>!</a>
+    <a href="/sair" class="btn btn-danger"><i class="fas fa-sign-out-alt">Sair</i></a>      
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item 
+              <?php if (resolve('/')): ?> active<?php endif;?>
+              ">
+                <a class="nav-link" href="/">Home <span class="sr-only">(atual)</span></a>
+              </li>
+
+              <li class="nav-item 
+              <?php if (resolve('/sobre')): ?> active<?php endif;?>
+              ">
+                <a class="nav-link" href="/sobre">Sobre<span class="sr-only">(atual)</span></a>
+              </li>
+
+              <li class="nav-item 
+              <?php if (resolve('/jogo')): ?> active<?php endif;?>
+              ">
+                <a class="nav-link" href="/jogo">Jogo <span class="sr-only">(atual)</span></a>
+              </li>
+
+              <li class="nav-item 
+              <?php if (resolve('/rank')): ?> active<?php endif;?>
+              ">
+                <a class="nav-link" href="/rank">Rank<span class="sr-only">(atual)</span></a>
+              </li>
+        
+            </ul>
+          </div>
+
 </div>
 
+
 <div id="main">
-        <div class="row">
-            <div class="col">
-                <ul id="main-menu" class="nav flex-column nav-pills bg-secondary text-white p-2">
-                    <li class="nav-item">
-                        <span class="nav-link text-white-50"><small>MENU</small></span>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="nav-link 
-                        <?php if (resolve('/')): ?> active<?php endif;?>
-                        "><i class="far fa-file-alt"></i>Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/sobre" class="nav-link
-                        <?php if (resolve('/sobre')): ?> active<?php endif;?>
-                        "><i class="far fa-file-alt"></i>Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/forum" class="nav-link
-                        <?php if (resolve('/forum')): ?> active<?php endif;?>
-                        "><i class="far fa-user"></i>Fórum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/jogo" class="nav-link
-                        <?php if (resolve('/jogo')): ?> active<?php endif;?>
-                        "><i class="far fa-user"></i>Jogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/rank" class="nav-link
-                        <?php if (resolve('/rank')): ?> active<?php endif;?>
-                        "><i class="far fa-user"></i>Rank</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="content" class="col-10">
-                <?php include $content ?>
-            </div>
-        </div>
+    <div id="content" class="container">
+        <?php include $content ?>
+    </div>
 
 </div>
 
