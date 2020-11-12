@@ -15,3 +15,4 @@ Flight::route('/admin', function(){
     echo 'hello admin!';
 });
 
+Flight::start();
