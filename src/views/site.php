@@ -18,27 +18,19 @@
     
           <div class="navbar-collapse collapse" id="navbarsExample01" style="">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item 
-              <?php if (resolve('/')): ?> active<?php endif;?>
-              ">
+              <li class="nav-item">
                 <a class="nav-link" href="/">Home <span class="sr-only">(atual)</span></a>
               </li>
 
-              <li class="nav-item 
-              <?php if (resolve('/sobre')): ?> active<?php endif;?>
-              ">
+              <li class="nav-item">
                 <a class="nav-link" href="/sobre">Sobre<span class="sr-only">(atual)</span></a>
               </li>
 
-              <li class="nav-item 
-              <?php if (resolve('/jogo')): ?> active<?php endif;?>
-              ">
+              <li class="nav-item">
                 <a class="nav-link" href="/jogo">Jogo <span class="sr-only">(atual)</span></a>
               </li>
 
-              <li class="nav-item 
-              <?php if (resolve('/rank')): ?> active<?php endif;?>
-              ">
+              <li class="nav-item">
                 <a class="nav-link" href="/rank">Rank<span class="sr-only">(atual)</span></a>
               </li>
         
