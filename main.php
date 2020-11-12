@@ -1,18 +1,30 @@
 <?php
 session_start();
+require __DIR__ . '/vendor/autoload.php';
 
-if(!isset($_SESSION['id_usuario'])){
-    header("location: login.php");
-    exit;
-}
+// if(!isset($_SESSION['id_usuario'])){
+//     header("location: login.php");
+//     exit;
+// }
+Flight::route('/', function(){
+    echo 'hello world!';
+});
 
-require __DIR__ . '/src/models/resolve-route.php';
-require __DIR__ . '/src/models/render.php';
+Flight::route('/teste', function(){
+    echo 'hello teste!';
+});
 
-# ira verificar na url se é o admin ou o site
-if (resolve('/admin/?(.*)')) {
-    require __DIR__ . '/src/routers/admin-route.php';
+Flight::route('/teste/hello', function(){
+    echo 'hellooooo teste!';
+});
 
-} elseif (resolve('/(.*)')) {
-    require __DIR__ . '/src/routers/site-route.php';
-}
+
+Flight::route('/admin', function(){
+    echo 'hello admin!';
+});
+
+Flight::route('/admin/post', function(){
+    echo 'hello admin tome post!';
+});
+
+Flight::start();
