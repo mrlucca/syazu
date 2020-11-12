@@ -42,7 +42,7 @@
 
 <div id="main">
     <div id="content" class="container">
-        <?php //include $content ?>
+        <?php include $content ?>
     </div>
 
 </div>
