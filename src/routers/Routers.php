@@ -6,14 +6,24 @@ require_once __DIR__ . "/Site.php";
 
 // Flight::map('notFound',"Razin");
 
-Flight::route('/', array("Raiz", "index"));
+Flight::route('/', function(){
+    require_once __DIR__ . "/../views/site.php";
+});
 
-Flight::route('/sobre', array("Site", "sobre"));
+Flight::route('/sobre', function(){
+    require_once __DIR__ . "/../views/site.php";
+    $GLOBALS['content'] = __DIR__ . "/../viws/site/sobre.php";
+});
 
-Flight::route('/jogo', array("Site", "jogo"));
+Flight::route('/jogo', function(){
+    require_once __DIR__ . "/../views/site.php";
+    $GLOBALS['content'] = __DIR__ . "/../viws/site/jogo.php";
+});
 
-// Flight::route('/admin', array("Site", ""));
 
-Flight::route('/rank', array("Site", "rank"));
+Flight::route('/rank', function(){
+    require_once __DIR__ . "/../views/site.php";
+    $GLOBALS['content'] = __DIR__ . "/../viws/site/rank.php";
+});
 
 Flight::start();
