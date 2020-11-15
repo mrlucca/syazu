@@ -42,8 +42,8 @@
 
 <div id="main">
     <div id="content" class="container">
-        <?= &$content ?>
-        <?php include &$content ?>
+        <?= $_SERVER['l_content'] ?>
+        <?php include $_SERVER['l_content'] ?>
     </div>
 
 </div>
