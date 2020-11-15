@@ -7,7 +7,7 @@ require_once __DIR__ . "/Site.php";
 // Flight::map('notFound',"Razin");
 
 Flight::route('/', function(){
-    $_SERVER['l_content'] = __DIR__ . "/../site/home.php";
+    $_SERVER['l_content'] = __DIR__ . "/../views/site/home.php";
     require_once __DIR__ . "/../views/site.php";
 });
 
