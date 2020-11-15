@@ -42,8 +42,8 @@
 
 <div id="main">
     <div id="content" class="container">
-        <?= $content ?>
-        <?php include $content ?>
+        <?= &$content ?>
+        <?php include &$content ?>
     </div>
 
 </div>
