@@ -42,7 +42,8 @@
 
 <div id="main">
     <div id="content" class="container">
-        <?php include $GLOBALS['content'] ?? __DIR__ . "/site/home.php" ?>
+        <?= $content ?>
+        <?php include $content ?>
     </div>
 
 </div>
