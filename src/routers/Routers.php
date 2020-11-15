@@ -12,18 +12,18 @@ Flight::route('/', function(){
 });
 
 Flight::route('/sobre', function(){
-    $_SERVER['l_content'] = __DIR__ . "/../viws/site/sobre.php";
+    $_SERVER['l_content'] = __DIR__ . "/../views/site/sobre.php";
     require_once __DIR__ . "/../views/site.php";
 });
 
 Flight::route('/jogo', function(){
-    $_SERVER['l_content'] = __DIR__ . "/../viws/site/jogo.php";
+    $_SERVER['l_content'] = __DIR__ . "/../views/site/jogo.php";
     require_once __DIR__ . "/../views/site.php";
 });
 
 
 Flight::route('/rank', function(){
-    $_SERVER['l_content'] = __DIR__ . "/../viws/site/rank.php";
+    $_SERVER['l_content'] = __DIR__ . "/../views/site/rank.php";
     require_once __DIR__ . "/../views/site.php";
 });
 
