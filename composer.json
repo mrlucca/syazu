@@ -12,5 +12,6 @@
     ],
     "description": "Site requisitado pelo professor para complemento da apresentação do game",
     "require": {
+        "mikecao/flight": "^1.3"
     }
 }

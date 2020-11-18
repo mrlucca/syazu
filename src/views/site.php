@@ -10,7 +10,7 @@
 <div id="header">
 
 <div class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Bem vindo <?= mb_convert_case($_SESSION["nome"], MB_CASE_TITLE, "UTF-8") ?>!</a>
+    <a class="navbar-brand" href="/">Bem vindo <?= "Lucca" #mb_convert_case($_SESSION["nome"], MB_CASE_TITLE, "UTF-8") ?>!</a>
     <a href="/sair" class="btn btn-danger"><i class="fas fa-sign-out-alt">Sair</i></a>      
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@
 
 <div id="main">
     <div id="content" class="container">
-        <?php include $_SERVER['l_content'] ?>
+        <?php include __DIR__ . "/site/{$nomeDoConteudo}.php" ?>
     </div>
 
 </div>
