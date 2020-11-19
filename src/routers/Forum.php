@@ -1,14 +1,10 @@
 <?php
 
-require_once __DIR__ . "/../controllers/Login.php";
-
-class Forum extends Login
+require_once __DIR__ . "/../controllers/Logged.php";
+class Forum extends Logged
 {
     public static function render(){
-        if (parent::estaLogado()){
-            Flight::render('site.php', array('nomeDoConteudo' => 'forum'));
-        }else{
-            echo "não tá logado";
-        }
+        parent::estaLogado();
+        Flight::render('site.php', array('nomeDoConteudo' => 'forum'));
     }
 }

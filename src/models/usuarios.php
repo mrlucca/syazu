@@ -45,7 +45,6 @@ Class Usuario
 		global $pdo;
 		//verificar se o nickname e senha estao cadastrados, se sim
 		$sql = $pdo->prepare("SELECT id, nome FROM usuarios WHERE nickname = :e AND senha = :s");
-		var_dump($sql);
 		$sql->bindValue(":e",$nickname);
 		$sql->bindValue(":s",md5($senha));
 		$sql->execute();
@@ -53,7 +52,6 @@ Class Usuario
 		{
 			//entrar no sistema (sessao)
 			$dado = $sql->fetch();
-			session_start();
 			$_SESSION['id_usuario'] = $dado['id'];
 			$_SESSION['nome'] = $dado['nome'];
 			return true; //cadastrado com sucesso

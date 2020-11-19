@@ -1,9 +1,3 @@
-<?php
-	require_once __DIR__ . '/../src/models/usuarios.php';
-	$u = new Usuario();
-	$ini = parse_ini_file(dirname(__DIR__, 1) . "/.ini");
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

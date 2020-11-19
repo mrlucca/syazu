@@ -1,9 +1,3 @@
-<?php 
-// require_once __DIR__ . '/../src/models/usuarios.php';
-// $u = new Usuario();
-// $ini = parse_ini_file(dirname(__DIR__, 1) . "/.ini");
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,9 +15,50 @@
 		<input type="text" placeholder="Nickname" name="nickname">
 		<input type="password" placeholder="Senha" name="senha">
 		<input class="row" type="submit" value="Acessar">
-		<a href="cadastrar.php">Ainda não é cadastrado?<strong> Cadastre-se!</strong></a>
+		<a href="/">Ainda não é cadastrado?<strong> Cadastre-se!</strong></a>
 	</form>
 </div>
-
+<?php
+if(isset($_POST['nickname']))
+{
+	$nickname = addslashes($_POST['nickname']);
+	$senha = addslashes($_POST['senha']);
+	
+	if(!empty($nickname) && !empty($senha))
+	{
+		$u->conectar($ini["table"],	$ini["host"], $ini["user"], $ini["password"]);
+		if($u->msgErro == "")
+		{
+			if($u->logar($nickname,$senha))
+			{
+				Flight::redirect('/');
+			}
+			else
+			{
+				?>
+				<div class="msg-erro">
+					Nickname e/ou senha estão incorretos!
+				</div>
+				<?php
+			}
+		}
+		else
+		{
+			?>
+			<div class="msg-erro">
+				<?php echo "Erro: ".$u->msgErro; ?>
+			</div>
+			<?php
+		}
+	}else
+	{
+		?>
+		<div class="msg-erro">
+			Preencha todos os campos!
+		</div>
+		<?php
+	}
+}
+?>
 </body>
 </html>
