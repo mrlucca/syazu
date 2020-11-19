@@ -16,7 +16,7 @@
 		<input type="password" name="senha" placeholder="Senha" maxlength="15">
 		<input type="password" name="confSenha" placeholder="Confirmar Senha" maxlength="15">
 		<input class="row" type="submit" value="Cadastrar">
-		<a href="login.php">Clique aqui para fazer<strong> login!</strong></a>
+		<a href="/login">Clique aqui para fazer<strong> login!</strong></a>
 	</form>
 </div>
 <?php
