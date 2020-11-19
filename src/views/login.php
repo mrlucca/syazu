@@ -15,7 +15,7 @@
 		<input type="text" placeholder="Nickname" name="nickname">
 		<input type="password" placeholder="Senha" name="senha">
 		<input class="row" type="submit" value="Acessar">
-		<a href="/">Ainda não é cadastrado?<strong> Cadastre-se!</strong></a>
+		<a href="/cadastrar">Ainda não é cadastrado?<strong> Cadastre-se!</strong></a>
 	</form>
 </div>
 <?php
