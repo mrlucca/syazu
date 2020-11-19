@@ -14,8 +14,8 @@ Flight::route('/',      array('Home','render'));
 Flight::route('/sobre', array('Sobre','render'));
 Flight::route('/jogo',  array('Jogo','render'));
 Flight::route('/rank',  array('Rank','render'));
-Flight::route('/forum',  array('Forum','render'));
-Flight::route('/sair',  array('Sair','sair'));
+Flight::route('/forum', array('Forum','render'));
+Flight::route('/sair',  array('Sair','logout'));
 Flight::route('/api/login/@nome/@senha',array('ApiLogin','setData'));
 Flight::route('/api/rank/@nome/@senha', array('ApiRank','setData'));
 
