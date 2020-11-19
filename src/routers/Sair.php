@@ -4,7 +4,7 @@
 class Sair
 {
     public static function logout(){
-        Flight::set('flight.views.path', __DIR__ ."/../views/login");
+        Flight::set('flight.views.path', __DIR__ ."/../views");
         Flight::render('login.php');
     }   
 }
