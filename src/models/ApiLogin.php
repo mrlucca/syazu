@@ -1,13 +1,18 @@
 <?php
 
+require_once __DIR__. "/usuarios.php";
 class ApiLogin
 {
-    public static function setData($nome, $senha)
+    public static function loginBD($nickname, $senha)
     {
-        if ($nome == "lucca" and $senha == "1058774"){
-            echo json_encode(["cadastrado"=> true, "id"=> "ainda em teste", "data"=> "hello"]);
-        } else {
-            echo json_encode(["cadastrado"=> false, "error" => "senha invalida"]);
-        }   
+        $u = new Usuario();
+        $ini = parse_ini_file(__DIR__ . "/../../.ini");
+        $u->conectar($ini["table"],	$ini["host"], $ini["user"], $ini["password"]);
+        return $u->validarLogin($nickname, $senha);
+    }
+    public static function setData($nickname, $senha)
+    {
+        $res = self::loginBD($nickname, $senha);
+        Flight::json($res);
     }
 }

@@ -39,12 +39,41 @@ Class Usuario
 		}
 	}
 
+	public function validarLogin($nickname, $senha)
+	{
+
+		global $pdo;
+		//verificar se o nickname e senha estao cadastrados, se sim
+		$sql = $pdo->prepare("SELECT id, nome FROM usuarios WHERE nickname = :e AND senha = :s");
+		$sql->bindValue(":e",$nickname);
+		$sql->bindValue(":s",md5($senha));
+		$sql->execute();
+		if($sql->rowCount() > 0){
+			$dado = $sql->fetch();
+			return ["error" => false, "nome" => $dado['nome'], "nickname" => $nickname];
+		}
+		return ["error" => true];
+	}
+
+	public function updatePontuacao($nickname, $pontuacao)
+	{
+		global $pdo;
+		//verificar se o nickname e senha estao cadastrados, se sim
+		$stmt = $pdo->prepare('UPDATE usuarios SET pontuacao = :p WHERE nickname = :nick');
+		$stmt->execute(array(
+			':nick'   => $nickname,
+			':p' => $pontuacao
+		));
+
+		return $stmt;
+	}
+
 
 	public function logar($nickname, $senha)
 	{
 		global $pdo;
 		//verificar se o nickname e senha estao cadastrados, se sim
-		$sql = $pdo->prepare("SELECT id, nome FROM usuarios WHERE nickname = :e AND senha = :s");
+		$sql = $pdo->prepare("SELECT id, nome, FROM usuarios WHERE nickname = :e AND senha = :s");
 		$sql->bindValue(":e",$nickname);
 		$sql->bindValue(":s",md5($senha));
 		$sql->execute();
@@ -56,17 +85,11 @@ Class Usuario
 			$_SESSION['nome'] = $dado['nome'];
 			return true; //cadastrado com sucesso
 		}
-		else
-		{
-			return false;//nao foi possivel logar
-		}
+
+		return false;//nao foi possivel logar
+		
 	}
 }
 
 
 
-
-
-
-
-?>

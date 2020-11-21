@@ -24,6 +24,6 @@ Flight::route('/sair',  function() {
 });
 
 Flight::route('/api/login/@nome/@senha',array('ApiLogin','setData'));
-Flight::route('/api/rank/@nome/@senha', array('ApiRank','setData'));
+Flight::route('/api/rank/@nome/@senha/@pontuacao', array('ApiRank','setData'));
 
 Flight::start();
