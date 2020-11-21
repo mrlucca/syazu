@@ -1,5 +1,6 @@
 <?php
 
+
 require_once __DIR__ . "/Forum.php";
 require_once __DIR__ . "/Sobre.php";
 require_once __DIR__ . "/Jogo.php";

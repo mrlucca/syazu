@@ -7,6 +7,7 @@ Class Usuario
 
 	public function conectar($nome, $host, $usuario, $senha)
 	{
+		
 		global $pdo;
 		try 
 		{
@@ -55,6 +56,18 @@ Class Usuario
 		return ["error" => true];
 	}
 
+
+	public function pegarDadosDeUsuarios()
+	{
+
+		global $pdo;
+		//verificar se o nickname e senha estao cadastrados, se sim
+		$sql = $pdo->prepare("SELECT nome, nickname, pontuacao FROM usuarios");
+		$sql->execute();
+		return $sql->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	
 	public function updatePontuacao($nickname, $pontuacao)
 	{
 		global $pdo;
