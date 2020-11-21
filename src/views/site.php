@@ -4,7 +4,6 @@
     <title>Syazu</title>
     <link rel="stylesheet" href="./assets/css/main.css"> 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-
 </head>
 <body class="d-flex flex-column">
 <div id="header">

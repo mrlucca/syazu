@@ -73,7 +73,7 @@ Class Usuario
 	{
 		global $pdo;
 		//verificar se o nickname e senha estao cadastrados, se sim
-		$sql = $pdo->prepare("SELECT id, nome, FROM usuarios WHERE nickname = :e AND senha = :s");
+		$sql = $pdo->prepare("SELECT id, nome FROM usuarios WHERE nickname = :e AND senha = :s");
 		$sql->bindValue(":e",$nickname);
 		$sql->bindValue(":s",md5($senha));
 		$sql->execute();
@@ -84,9 +84,9 @@ Class Usuario
 			$_SESSION['id_usuario'] = $dado['id'];
 			$_SESSION['nome'] = $dado['nome'];
 			return true; //cadastrado com sucesso
+		}else{
+			return false;//nao foi possivel logar
 		}
-
-		return false;//nao foi possivel logar
 		
 	}
 }
