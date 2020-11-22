@@ -19,4 +19,23 @@
         </p>
     </div>
 
+    <div class="container-fluid bg-2 text-center">
+        <h4>Ao longo da minha carreira de propagador do conhecimento eu fiz algumas entrevistas, fiquem a vonte para conferir!</h4>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+                <iframe width="350" height="200" src="https://www.youtube.com/embed/Isl9xZjCBWE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-auto">
+                <iframe width="350" height="200" src="https://www.youtube.com/embed/DxDIaYww5U0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-auto">
+                <iframe width="350" height="200" src="https://www.youtube.com/embed/W6tNZ-Y0m1s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    
+        </div>
+
+    </div>
+
+
 </div>
