@@ -40,7 +40,7 @@
 
 
 <div id="main">
-    <div id="content" class="container">
+    <div id="content" class="container-fluid">
         <?php include __DIR__ . "/site/{$nomeDoConteudo}.php" ?>
     </div>
 

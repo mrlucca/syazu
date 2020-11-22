@@ -1,20 +1,22 @@
-<div class="text-center">
-    <h1 class="tituloDaPostagem">SALVE MARTE</h1>
-        <section class="grid">
-            <p class="item">O jogo Salve Marte (história do jogo).</p>
-    <h1 class="tituloDaPostagem">COMO JOGAR?</h1>
-        <section class="grid">
-            <p class="item">Você vai usar as teclas para movimentar para esquerda <td>&larr;</td> e direita <td>&rarr;</td></p>
-            <p class="item">Para pular você vai usar a seta para cima <td>&uarr;</td></p>
-    <h1 class="tituloDaPostagem">OBJETIVO</h1>
-        <section class="grid">
-            <p class="item">(colocar objetivo).</p>
-            <p class="item">Conseguindo isso, você vence <td>&#9996;</td></p>
-    <h1 class="tituloDaPostagem">PONTUAÇÃO</h1>
-        <section class="grid">
-            <p class="item">(sobre a pontução) <td>&#10084;</td> </p>
-    <h1 class="tituloDaPostagem">BÔNUS</h1>
-        <section class="grid">
-            <p class="item">(sobre o bônus</p>
-        </section>
+<style>
+    #sobre > img {
+        width: 20%;
+    }
+</style>
+
+<div class="bg-light text-dark">
+    <div id="sobre" class="container-fluid bg-info text-white bg-2 text-center">
+        <h3>Quem sou eu?</h3>
+        <img src="./assets/img/bilu.jpg" class="rounded-circle">
+        <h3>Eu sou o Bilu, sim o famoso Bilu!</h3>
+    </div>
+    
+    
+    <div class="container-fluid bg-2 text-center">
+        <h3>O que eu vim fazer aqui? Qual o meu objetivo?</h3>
+        <p>Tudo começou quando eu vim do planeta batatinhas, eu vi que aqui na terra as pessoas
+            necessitavam de alguma coisa e isso é o conhecimento...........
+        </p>
+    </div>
+
 </div>
