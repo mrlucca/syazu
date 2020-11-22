@@ -1,5 +1,5 @@
 <div class="row text-center">
-    <div class="col">
+    <div class="col-lg">
         <div class="p-3 mb-2 bg-light text-dark">
             <h1>SALVE MARTE <a href="#" class="btn btn-primary btn-lg p-2" role="button">JOGAR</a></h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -32,7 +32,7 @@
 
         </div>
     </div>
-    <div class="col">
+    <div class="col-lg-auto">
         <div class="card text-white bg-secondary mb-1">
             <div class="card-body">
                 <h1 class="card-title">COMO JOGAR?</h1>
