@@ -13,11 +13,9 @@
                         <img src="./assets/img/logo.png" class="card-img">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/logo.png" class="card-img">
+                        <img src="./assets/img/MINI.jpeg" class="card-img">
                     </div>
-                    <div class="carousel-item">
-                        <img src="./assets/img/logo.png" class="card-img">
-                    </div>
+
                 </div>
 
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
