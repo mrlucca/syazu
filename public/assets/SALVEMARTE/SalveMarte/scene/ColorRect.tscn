@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scene/script_pause.gd" type="Script" id=1]
+[ext_resource path="res://font/GROBOLD.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "piscar"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 0, 0, 1 ), Color( 0.0117647, 0.00784314, 0.00784314, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 26
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 26
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 44
+font_data = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect"]
+pause_mode = 2
+margin_left = -14.0
+margin_top = -21.0
+margin_right = 1036.0
+margin_bottom = 613.0
+color = Color( 1, 0.592157, 0.0196078, 0.419608 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "piscar"
+anims/piscar = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 402.726
+margin_top = 546.636
+margin_right = 670.726
+margin_bottom = 581.636
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.12, 0.04, 0.04, 0.85 )
+text = "Pressione P"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musica" type="CheckBox" parent="."]
+margin_left = 425.423
+margin_top = 187.313
+margin_right = 614.423
+margin_bottom = 286.313
+custom_fonts/font = SubResource( 3 )
+text = "Musica"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="efeitos" type="CheckBox" parent="."]
+margin_left = 420.661
+margin_top = 338.116
+margin_right = 643.661
+margin_bottom = 373.116
+custom_fonts/font = SubResource( 4 )
+text = "Efeitos Sonotos"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 430.186
+margin_top = 65.0834
+margin_right = 651.186
+margin_bottom = 117.083
+custom_fonts/font = SubResource( 5 )
+text = "Ajustes"
+[connection signal="pressed" from="musica" to="." method="_on_musica_pressed"]
+[connection signal="pressed" from="efeitos" to="." method="_on_efeitos_pressed"]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scene/script_inimigo.gd" type="Script" id=1]
+[ext_resource path="res://img/meteoro.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 19.2646
+
+[sub_resource type="Animation" id=2]
+resource_name = "parado"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 0, 0, 690, 525 ), Rect2( 0, 0, 690, 525 ), Rect2( 0, 0, 690, 525 ) ]
+}
+
+[node name="meteoro" type="Area2D"]
+position = Vector2( 42.9381, 18.0421 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.0177002, -1.59247 )
+scale = Vector2( 0.0514802, 0.0526345 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 690, 525 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.594604, -1.48651 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "parado"
+anims/parado = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_meteoro_body_entered"]

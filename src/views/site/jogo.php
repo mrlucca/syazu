@@ -1,7 +1,7 @@
 <div class="row text-center">
     <div class="col-lg">
         <div class="p-3 mb-2 bg-light text-dark">
-            <h1>SALVE MARTE <a href="#" class="btn btn-primary btn-lg p-2" role="button">JOGAR</a></h1>
+            <h1>SALVE MARTE <a href="./assets/SALVEMARTE/SalveMarte.html" class="btn btn-primary btn-lg p-2" role="button">JOGAR</a></h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
