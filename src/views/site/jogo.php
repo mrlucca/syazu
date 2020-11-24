@@ -13,7 +13,7 @@
                         <img src="./assets/img/logo.png" class="card-img">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/MINI.jpeg" class="card-img">
+                        <img src="./assets/img/MINI.jpg" class="card-img">
                     </div>
 
                 </div>

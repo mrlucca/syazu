@@ -13,14 +13,14 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="./assets/img/inter1.jpeg" class="d-block w-100" alt="...">
+      <img src="./assets/img/inter1.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Venha jogar o Salve Marte</h5>
         <p>Finalmente a espera pelo game acabou, jogue agora e se divirta com o bilu!</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="./assets/img/inter2.jpeg" class="d-block w-100" alt="...">
+      <img src="./assets/img/inter2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Cuidado com a cabeça.</h5>
       </div>
