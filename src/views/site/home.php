@@ -6,24 +6,23 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./assets/img/marte.png" class="d-block w-100" alt="...">
+      <img src="./assets/img/ALIEN.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Imagem do game</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h5>Vamos dominar o mundo!</h5>
+        <p>Busquem conhecimento</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="./assets/img/marte.png" class="d-block w-100" alt="...">
+      <img src="./assets/img/inter1.jpeg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>UM dia legal no game</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h5>Venha jogar o Salve Marte</h5>
+        <p>Finalmente a espera pelo game acabou, jogue agora e se divirta com o bilu!</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="./assets/img/marte.png" class="d-block w-100" alt="...">
+      <img src="./assets/img/inter2.jpeg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Naves e aliéns</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <h5>Cuidado com a cabeça.</h5>
       </div>
     </div>
   </div>
