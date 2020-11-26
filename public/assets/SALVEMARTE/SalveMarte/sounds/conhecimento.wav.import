@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/conhecimento.wav-c8294b756cd83b03b3573ee3ae66975d.sample"
+
+[deps]
+
+source_file="res://sounds/conhecimento.wav"
+dest_files=[ "res://.import/conhecimento.wav-c8294b756cd83b03b3573ee3ae66975d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

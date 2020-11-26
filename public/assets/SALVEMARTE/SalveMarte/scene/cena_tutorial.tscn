@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://font/GROBOLD.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://img/tuto.png" type="Texture" id=2]
+[ext_resource path="res://scene/script_tuto.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.517647, 0.00784314, 0.427451, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 519.913, 302.658 )
+scale = Vector2( 0.699343, 0.83129 )
+texture = ExtResource( 2 )
+
+[node name="play" type="Button" parent="."]
+margin_left = 617.519
+margin_top = 507.983
+margin_right = 836.519
+margin_bottom = 549.983
+custom_styles/hover = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0.0588235, 1, 1 )
+custom_colors/font_color = Color( 0.686275, 0.568627, 1, 1 )
+text = "APERTA O PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 207.03
+margin_top = 567.485
+margin_right = 728.03
+margin_bottom = 603.485
+custom_fonts/font = SubResource( 3 )
+text = "Aperte P para pausar a qualquer momento"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
